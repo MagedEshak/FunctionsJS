@@ -10,10 +10,43 @@ sayHello(`Maged`);
 console.log("-".repeat(20));
 console.log("2- Function Advanced Examples");
 console.log("-".repeat(20));
+function sayHi(name, age) {
+    if (age < 20) {
+        console.log(`This App not Suitable for you (${name}).`);
+    } else {
+        console.log(`Hello ${name} , You age is ${age}`);
+    }
+}
+
+sayHi("Maged", 25);
+sayHi("Shery", 21);
+sayHi("Gessy", 3);
+
+function generateYears(start, end, exclude) {
+    for (let i = start; i <= end; i++) {
+        if (i === exclude) {
+            continue;
+        }
+        console.log(i);
+    }
+}
+
+generateYears(2000, 2025, 2022)
 
 console.log("-".repeat(20));
 console.log("3- Function Return Statement And Use Cases");
 console.log("-".repeat(20));
+function generate(start, end, exclude) {
+    for (let i = start; i <= end; i++) {
+        console.log(i);
+        if (i === exclude) {
+            return `interruptting`;
+        }
+        
+    }
+}
+
+generate(1, 10, 8);
 
 console.log("-".repeat(20));
 console.log("4- Function Default Parameters");
