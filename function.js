@@ -52,6 +52,18 @@ console.log("-".repeat(20));
 console.log("4- Function Default Parameters");
 console.log("-".repeat(20));
 
+function sayWe(name, age = "unknown") {
+    if (age < 20) {
+        return `This App not Suitable for you (${name}).`;
+    } else {
+        return `Hello ${name} , You age is ${age}`;
+    }
+    
+    
+}
+
+console.log(sayWe("Maged"));
+
 console.log("-".repeat(20));
 console.log("5- Function Rest Parameters");
 console.log("-".repeat(20));
