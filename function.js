@@ -76,3 +76,24 @@ console.log(RandomNumbers_Calculation(20,30,60,56,44,160));
 console.log("-".repeat(20));
 console.log("6- Function Ultimate Practice");
 console.log("-".repeat(20));
+
+function card(userName = "nu", age = "un", Adress = "un", phone = "un", show = "Yes", ...sk ) {
+    document.write(`<div style="border: 3px solid red; padding: 10px">`);
+    document.write(`<h3 style="display: inline;">Welcome, <h1 style="display: inline;">${userName}</h1></h3>`);
+    document.write(`<p>Age: ${age}</p>`);
+    document.write(`<p>Adress: ${Adress}</p>`);
+    document.write(`<p>Phone Number: ${phone}</p>`);
+    if (show === "Yes") {
+        if (sk.length > 0) {
+            document.write(`<p>Skills: ${sk.join(" | ")}</p>`);
+        } else {
+            document.write(`<p>Skills: Not has any skills.</p>`);
+        }
+    } else {
+        document.write(`<p>Skills: Don't Show Skills.</p>`);
+    }
+    document.write(`<div>`);
+}
+
+card("Maged", 25, "Abu Tig", "01275465883", "Yes", "Html", "CSS", "JS");
+console.log("Show in HTML page");
