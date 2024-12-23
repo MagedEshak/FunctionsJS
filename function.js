@@ -42,7 +42,6 @@ function generate(start, end, exclude) {
         if (i === exclude) {
             return `interruptting`;
         }
-        
     }
 }
 
@@ -58,8 +57,6 @@ function sayWe(name, age = "unknown") {
     } else {
         return `Hello ${name} , You age is ${age}`;
     }
-    
-    
 }
 
 console.log(sayWe("Maged"));
@@ -67,6 +64,14 @@ console.log(sayWe("Maged"));
 console.log("-".repeat(20));
 console.log("5- Function Rest Parameters");
 console.log("-".repeat(20));
+function RandomNumbers_Calculation(...Numbers){
+    let result = 0;
+    for (let i = 0; i < Numbers.length; i++) {
+        result += Numbers[i];
+    }
+    return `Final result is ${result}`;
+}
+console.log(RandomNumbers_Calculation(20,30,60,56,44,160));
 
 console.log("-".repeat(20));
 console.log("6- Function Ultimate Practice");
