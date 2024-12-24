@@ -72,7 +72,37 @@ checker = (zName) => {
 console.log(checker("Osama")("Available")(4000)); // Osama, My Salary Is 4000
 console.log(checker("Ahmed")("Not Available")()); // Iam Not Avaialble
 
-
 console.log("----------------------");
 console.log("-- التكليف 04 --");
 console.log("----------------------");
+
+function specialMix(...data) {
+    let result = 0;
+    let allString = true;
+    
+    for (let i = 0; i < data.length; i++) {
+        let item = data[i]
+        if (typeof item === "number") {
+            result += item;
+            allString = false;
+        } else if (typeof item === "string") {
+            let num = parseInt(item);
+            if (!isNaN(num)) {
+                result += num;
+                allString = false;
+            }
+        }
+    }
+        if (allString) {
+            return `All Is Strings`;
+        } else { 
+            return result;
+        }
+    }
+
+console.log(specialMix(10, 20, 30)); // 60
+console.log(specialMix("10Test", "Testing", "20Cool")); // 30
+console.log(specialMix("Testing", "10Testing", "40Cool")); // 50
+console.log(specialMix("Test", "Cool", "Test")); // All Is Strings
+
+
