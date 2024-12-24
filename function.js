@@ -140,3 +140,47 @@ console.log("-".repeat(20));
 console.log("9- Arrow Function Syntax");
 console.log("-".repeat(20));
 
+let print1 = function () {
+    return 10;
+};
+console.log(print1());
+
+let print2 = _ => { // في حالة عدم وجود باراميتر يمكن حذف الاقواس
+    return 10;
+};
+console.log(print2());
+
+let print3 = _ => 10; // في حالة عدم وجود باراميتر يمكن حذف الاقواس ويمكن حذف الكيرلي و الريتيرن
+console.log(print3());
+
+
+let print4 = num => num; // في حالة وجود باراميتر واحد يمكن حذف الاقواس وكتابة الباراميتر فقط ويمكن حذف الكيرلي و الريتيرن
+console.log(print4(10));
+
+let print5 = (num1, num2) => {
+    return num1 + num2;
+};
+console.log(print5(10, 20));
+
+console.log("-".repeat(20));
+console.log("10- Scope – Global And Local");
+console.log("-".repeat(20));
+
+var a = 1;
+let b = 2;
+
+function showText() {
+    var a = 10;
+    let b = 20;
+    console.log(`Function – Local ${a}`);
+    console.log(`Function – Local ${b}`);
+}
+showText();
+
+console.log(`From Global ${a}`);
+console.log(`From Global ${b}`);
+
+console.log("-".repeat(20));
+console.log("11- Scope – Block [If, Swich, For]");
+console.log("-".repeat(20));
+
