@@ -97,3 +97,46 @@ function card(userName = "nu", age = "un", Adress = "un", phone = "un", show = "
 
 card("Maged", 25, "Abu Tig", "01275465883", "Yes", "Html", "CSS", "JS");
 console.log("Show in HTML page");
+
+console.log("-".repeat(20));
+console.log("7- Anonymous Function And Practice");
+console.log("-".repeat(20));
+
+let calculation = function (num1, num2) { 
+    return num1 + num2;
+};
+console.log(calculation(20,50));
+
+document.getElementById("btn").onclick = function () {
+    console.log("Show Message");
+    alert("HI")
+};
+
+setTimeout(function () {
+    console.log("After 2 seconds appeared");
+}, 2000);
+
+
+console.log("-".repeat(20));
+console.log("8- Return Nested Function");
+console.log("-".repeat(20));
+
+function showMessage(fName, Lname) {
+    let Message = "Hello";
+
+    function getName() {
+        return `${fName} ${Lname}`;
+    }
+    function nestedMessage() {
+        return `${Message} ${getName()}`;
+        //return `${Message} ${fName} ${Lname}`;
+
+    }
+    return nestedMessage();
+}
+console.log(showMessage("Maged", "Eshak"));
+
+console.log("-".repeat(20));
+console.log("9- Arrow Function Syntax");
+console.log("-".repeat(20));
+
